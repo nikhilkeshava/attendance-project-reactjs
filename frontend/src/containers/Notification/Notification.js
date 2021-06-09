@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-
-import "./noti.css";
 import TextArea from "../../components/TextArea/TextArea";
 import Button from "../../components/Button/Button";
 import SendIcon from "@material-ui/icons/Send";
