@@ -15,20 +15,26 @@ class App extends React.Component {
   // App contains routes and also wrapped with snackbar and intl for localization
 
   componentDidMount = () => {
+    if (history.location.pathname === "/") {
+      history.push("/login");
+    }
+
     if (
       !(
         (localStorage.getItem("isLoggedIn") && localStorage.getItem("token")) ||
         history.location.pathname === "/login"
       )
-    )
-      if (
-        localStorage.getItem("isLoggedIn") &&
-        localStorage.getItem("token") &&
-        (history.location.pathname === "/login" ||
-          history.location.pathname === "/")
-      ) {
-        history.push("/dashboard");
-      }
+    ) {
+      history.push("/login");
+    }
+    if (
+      localStorage.getItem("isLoggedIn") &&
+      localStorage.getItem("token") &&
+      (history.location.pathname === "/login" ||
+        history.location.pathname === "/")
+    ) {
+      history.push("/dashboard");
+    }
   };
 
   componentDidUpdate(prevProps) {}
