@@ -4,6 +4,7 @@ export const Dashboard = React.lazy(() =>
   import("../containers/Dashboard/dashboard")
 );
 export const Login = React.lazy(() => import("../containers/Login/Login"));
+export const Reg = React.lazy(() => import("../containers/Login/Register"));
 export const Attendance = React.lazy(() =>
   import("../containers/Attendance/Attendance")
 );

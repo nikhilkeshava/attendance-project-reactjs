@@ -10,6 +10,7 @@ const Routes = ({}) => {
       <Router history={history}>
         <Switch>
           <LazyComponent.Login path="/login" exact />
+          <LazyComponent.Reg path="/register" exact />
           <LazyComponent.Dashboard path="/dashboard" exact />
           <LazyComponent.Attendance path="/attendance" exact />
           <LazyComponent.UserDataAdd path="/adduserdata" exact />
